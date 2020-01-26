@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PostBuildEvent>powershell -ExecutionPolicy ByPass -file "..\..\hash.ps1"</PostBuildEvent>
+    <PostBuildEvent>powershell -ExecutionPolicy ByPass -file "D:\a\TestGitHub\TestGitHub\TestGitHub\hash.ps1"</PostBuildEvent>
   </PropertyGroup>
 </Project>
