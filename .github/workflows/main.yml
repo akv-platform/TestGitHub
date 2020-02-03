@@ -44,3 +44,51 @@ jobs:
       run: bundler -v
     - name: install bundler
       run: gem install bundler
+
+  ubuntu-latest-ruby-24:
+    name: "2.4 ruby on ubuntu latest"
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.4' 
+    - name: check ruby
+      run: ruby -v
+    - name: check bundler
+      run: bundler -v
+    - name: install bundler
+      run: gem install bundler
+      
+  ubuntu-1604-ruby-24:
+    name: "2.4 ruby on ubuntu 16.04"
+    runs-on: ubuntu-16.04
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.4' 
+    - name: check ruby
+      run: ruby -v
+    - name: check bundler
+      run: bundler -v
+    - name: install bundler
+      run: gem install bundler
+
+  osx-catalina-ruby-24:
+    name: "2.4 ruby on mojave"
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.4' 
+    - name: check ruby
+      run: ruby -v
+    - name: check bundler
+      run: bundler -v
+    - name: install bundler
+      run: gem install bundler
