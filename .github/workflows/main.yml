@@ -15,6 +15,6 @@ jobs:
     - name: check ruby
       run: ruby -v
     - name: check bundler
-      run: bundler
+      run: bundler -v
 
       
