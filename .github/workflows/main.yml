@@ -15,7 +15,7 @@ jobs:
     - name: check bundler
       run: bundler -v
     - name: install bundler
-      run: gem install bundlerk:
+      run: gem install bundler
      
   build:
 
@@ -30,5 +30,4 @@ jobs:
       run: bundler -v
     - name: install bundler
       run: gem install bundler
-
       
