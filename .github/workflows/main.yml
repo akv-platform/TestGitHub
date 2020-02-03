@@ -5,16 +5,16 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-ruby@v1
-      with:
-        ruby-version: '2.3'
     - name: check ruby
       run: ruby -v
     - name: check bundler
       run: bundler -v
+    - name: install bundler
+      run: gem install bundler
 
       
