@@ -9,13 +9,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Nuget
-      uses: warrenbuckley/Setup-Nuget@v1
-    - name: Setup MSBuild.exe
-      uses: warrenbuckley/Setup-MSBuild@v1
-    - name: Restore Nuget package
-      run: nuget restore
-    - name: MSBuild
-      id: msbuild
-      run: msbuild
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.6'
+    - name: check ruby
+      run: ruby -v
+    - name: check bundler
+      run: bundler
+
       
