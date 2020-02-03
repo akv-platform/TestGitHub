@@ -3,10 +3,10 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-
+  ubuntu-latest-ruby-default:
+    name: "default ruby on ubuntu latest"
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-ruby@v1
@@ -16,18 +16,3 @@ jobs:
       run: bundler -v
     - name: install bundler
       run: gem install bundler
-     
-  build:
-
-    runs-on: ubuntu-16.04
-
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-ruby@v1
-    - name: check ruby
-      run: ruby -v
-    - name: check bundler
-      run: bundler -v
-    - name: install bundler
-      run: gem install bundler
-      
